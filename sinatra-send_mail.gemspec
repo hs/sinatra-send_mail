@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/sinatra/send_mail.rb",
+     "sinatra-send_mail.gemspec",
      "spec/send_mail_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
