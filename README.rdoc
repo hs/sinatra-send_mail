@@ -1,17 +1,42 @@
 = sinatra-send_mail
 
-Description goes here.
+sinatra-send_mail is an extension for Sinatra to send e-mail using smtp.
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+usage:
+
+  send_mail(from, to, subject, body, opts)
+
+      from:     sender's address.
+      to:       recipient's address.
+      subject:  subject of message.
+      body:     body of message.
+                You can use erb like: erb(:source)
+      opts:     options(see below).
+
+    Options:
+      content_type: content_type of message.
+      extra_header: additional heder.
+      account, password, authtype:
+                    options for SMTP Authentication.
+
+== Example
+
+   require 'rubygems'
+   require 'sinatra'
+   require 'sinatra/send_mail'
+
+   set :smtp_server 'Your SMTP Server'
+   set :smtp_locale 'locale'            # 'ja_JP' or ''
+
+   get '/' do
+     send_mail('foo@example.com', 'bar@example.com',
+               'test', 'Hello!!')
+   end
+
+   get '/erb' do
+     # Using Erb(views/msg_body.erb)
+     send_mail('<from_addr>', '<to_addr>', '<Subject>', erb(:msg_body))
+   end
 
 == Copyright
 
