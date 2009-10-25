@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "sinatra-send_mail"
     gem.summary = %Q{Sinatra extension to send e-mail}
-    gem.description = %Q{Sinatra extension to send e-mail}
+    gem.description = %Q{This extension enables to send e-mail in Sinatra using SMTP.}
     gem.email = "hs@on-sky.net"
     gem.homepage = "http://github.com/hs/sinatra-send_mail"
     gem.authors = ["Hideki SAKAMOTO"]
