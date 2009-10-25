@@ -26,16 +26,11 @@ usage:
    require 'sinatra/send_mail'
 
    set :smtp_server 'Your SMTP Server'
-   set :smtp_locale 'locale'            # 'ja_JP' or ''
+   set :smtp_locale 'Your locale'        # 'ja_JP' or ''
 
    get '/' do
      send_mail('foo@example.com', 'bar@example.com',
                'test', 'Hello!!')
-   end
-
-   get '/erb' do
-     # Using Erb(views/msg_body.erb)
-     send_mail('<from_addr>', '<to_addr>', '<Subject>', erb(:msg_body))
    end
 
 == Copyright
