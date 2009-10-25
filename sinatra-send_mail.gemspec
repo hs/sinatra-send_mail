@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hideki SAKAMOTO"]
   s.date = %q{2009-10-25}
-  s.description = %q{Sinatra extension to send e-mail}
+  s.description = %q{This extension enables to send e-mail in Sinatra using SMTP.}
   s.email = %q{hs@on-sky.net}
   s.extra_rdoc_files = [
     "LICENSE",
